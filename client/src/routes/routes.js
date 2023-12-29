@@ -12,82 +12,82 @@ import Test from "../pages/categoryPage";
 import CasherHistory from "../pages/casherHistory";
 
 const routes = [
-	<Route
-		path="/login"
-		key={"loginPage"}
-		element={
-			<ProtectedPage guestOnly={true}>
-				<LoginPage />
-			</ProtectedPage>
-		}
-	/>,
+  <Route
+    path="/login"
+    key={"loginPage"}
+    element={
+      <ProtectedPage guestOnly={true}>
+        <LoginPage />
+      </ProtectedPage>
+    }
+  />,
 
-	<Route
-		path="dashboardCashier"
-		element={
-			<ProtectedPage cashierOnly={true}>
-				<DashboardCashier />
-			</ProtectedPage>
-		}
-	/>,
-	<Route
-		path="/historyCashier"
-		element={
-			<ProtectedPage cashierOnly={true}>
-				<CasherHistory />
-			</ProtectedPage>
-		}
-	/>,
+  <Route
+    path="dashboardCashier"
+    element={
+      <ProtectedPage cashierOnly={true}>
+        <DashboardCashier />
+      </ProtectedPage>
+    }
+  />,
+  <Route
+    path="/historyCashier"
+    element={
+      <ProtectedPage cashierOnly={true}>
+        <CasherHistory />
+      </ProtectedPage>
+    }
+  />,
 
-	<Route
-		path="/dashboardAdmin"
-		element={
-			<ProtectedPage adminOnly={true}>
-				<DashboardAdminPage />
-			</ProtectedPage>
-		}
-	/>,
-	<Route
-		path="/products"
-		element={
-			<ProtectedPage adminOnly={true}>
-				<ProductPage />
-			</ProtectedPage>
-		}
-	/>,
-	<Route
-		path="/categories"
-		element={
-			<ProtectedPage adminOnly={true}>
-				<CategoryPage />
-				{/* <Test /> */}
-			</ProtectedPage>
-		}
-	/>,
+  <Route
+    path="/dashboardAdmin"
+    element={
+      <ProtectedPage adminOnly={true}>
+        <DashboardAdminPage />
+      </ProtectedPage>
+    }
+  />,
+  <Route
+    path="/products"
+    element={
+      <ProtectedPage adminOnly={true}>
+        <ProductPage />
+      </ProtectedPage>
+    }
+  />,
+  <Route
+    path="/categories"
+    element={
+      <ProtectedPage adminOnly={true}>
+        <CategoryPage />
+        {/* <Test /> */}
+      </ProtectedPage>
+    }
+  />,
 
-	<Route
-		path="/adminSettings"
-		element={
-			<ProtectedPage adminOnly={true}>
-				<AdminSettings />
-			</ProtectedPage>
-		}
-	/>,
-	<Route
-		path="/report"
-		element={
-			<ProtectedPage adminOnly={true}>
-				<ReportPage />
-			</ProtectedPage>
-		}
-	/>,
+  <Route
+    path="/adminSettings"
+    element={
+      <ProtectedPage adminOnly={true}>
+        <AdminSettings />
+      </ProtectedPage>
+    }
+  />,
+  <Route
+    path="/report"
+    element={
+      <ProtectedPage adminOnly={true}>
+        <ReportPage />
+      </ProtectedPage>
+    }
+  />,
 
-	<Route
-		path="/*"
-		element={
-			<ProtectedPage guestOnly={true} adminOnly={true} cashierOnly={true} />
-		}
-	/>,
+  <Route
+    path="/*"
+    element={
+      <ProtectedPage guestOnly={true} adminOnly={true} cashierOnly={true} />
+    }
+  />,
 ];
 
 export default routes;
